@@ -145,7 +145,7 @@ footer a {
     color: var(--softPink);
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width: 1200px) {
     body {
         text-align: left;
         background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
@@ -168,10 +168,14 @@ footer a {
     }
 
     .section-top > div:last-child {
-        width: 52%;
+        width: 60%;
     }
     
     /* Div Headings */
+    .div-heading {
+        max-width: 405px;
+    }
+
     h1 {
         font-size: 3.5rem;
         line-height: 3rem;
@@ -184,6 +188,7 @@ footer a {
     }
 
     .div-ratings > div {
+        max-width: 450px;
         flex-direction: row;
         gap: 2rem;
         padding: 1.25rem 2rem;
@@ -202,12 +207,17 @@ footer a {
     .section-testimonials {
         flex-direction: row;
         gap: 2rem;
+        justify-content: center;
     }
 
     .section-testimonials > div {
+        max-width: 340px;
+        max-height: 225px;
+        width: 33%;
         flex-direction: column;
         gap: 1.5rem;
         height: 75%;
+        padding: 2rem;
     }
 
     .section-testimonials > div:nth-child(2) {
