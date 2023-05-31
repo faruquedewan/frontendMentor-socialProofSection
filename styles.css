@@ -1,0 +1,226 @@
+:root {
+    /* Primary */
+    --veryDarkMagenta: hsl(300, 43%, 22%);
+    --softPink: hsl(333, 80%, 67%);
+    /* Neutral */
+    --darkGrayishMagenta: hsl(303, 10%, 53%);
+    --lightGrayishMagenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+    color: var(--veryDarkMagenta);
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+}
+
+main {
+    padding: 5rem 1.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Section Top */
+.section-top {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* Div Headings */
+h1 {
+    font-size: 2.5rem;
+    line-height: 2rem;
+    letter-spacing: -2px;
+    padding-inline: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.div-heading p {
+    line-height: 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--darkGrayishMagenta);
+    word-spacing: -1px;
+}
+
+/* Div Ratings */
+.div-ratings {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.div-ratings > div {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding-block: .75rem;
+    border-radius: 10px;
+    background-color: var(--lightGrayishMagenta);
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+}
+
+h2 {
+    font-size: 1.1rem;
+}
+
+/* Section Testimonials */
+.section-testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--white);
+}
+
+.section-testimonials > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--veryDarkMagenta);
+    border-radius: 10px;
+    padding: 2rem 3rem 2rem 2rem;
+}
+
+.section-testimonials img {
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+.section-testimonials > div > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-testimonials h2 {
+    font-weight: 500;
+}
+
+h3 {
+    color: var(--softPink);
+    font-weight: 400;
+    font-size: 1rem;
+    padding-top: .25rem;
+}
+
+.section-testimonials p {
+    text-align: left;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    word-spacing: -1px;
+}
+
+/* Footer */
+footer {
+    font-size: 11px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--softPink);
+}
+
+@media screen and (min-width:800px) {
+    body {
+        text-align: left;
+        background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    }
+    
+    main {
+        padding: 7.5rem;
+        gap: 4rem;
+    }
+    
+    /* Section Top */
+    .section-top {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .section-top > div:first-child {
+        width: 40%;
+    }
+
+    .section-top > div:last-child {
+        width: 52%;
+    }
+    
+    /* Div Headings */
+    h1 {
+        font-size: 3.5rem;
+        line-height: 3rem;
+        padding-inline: 0;
+    }
+    
+    /* Div Ratings */
+    .div-ratings {
+        align-items: end;
+    }
+
+    .div-ratings > div {
+        flex-direction: row;
+        gap: 2rem;
+        padding: 1.25rem 2rem;
+        width: 80%;
+    }
+    
+    .div-ratings > div:nth-child(1) {
+        margin-right: 6rem;
+    }
+
+    .div-ratings > div:nth-child(2) {
+        margin-right: 3rem;
+    }
+
+    /* Section Testimonials */
+    .section-testimonials {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .section-testimonials > div {
+        flex-direction: column;
+        gap: 1.5rem;
+        height: 75%;
+    }
+
+    .section-testimonials > div:nth-child(2) {
+        margin-top: 1rem;
+    }
+
+    .section-testimonials > div:nth-child(3) {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+        padding: 8rem 10rem;
+    }
+}
